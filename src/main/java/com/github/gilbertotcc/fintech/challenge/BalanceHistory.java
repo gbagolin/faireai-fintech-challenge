@@ -28,18 +28,14 @@ public class BalanceHistory {
     balances.put(referenceBalance.getDate(), referenceBalance);
   }
 
-
   public BalanceHistory addTransaction(Transaction transaction) {
     if (transaction.getBookedDate().compareTo(this.referenceBalance.getDate()) < 0) {
-      //backward transaction
       backWardTransactions.add(transaction);
     } else {
-      //onward transaction
       onWardTransactions.add(transaction);
     }
     return this;
   }
-
 
   private void computeOnWardBalances() {
     onWardTransactions.sort((t1, t2) -> t1.getBookedDate().compareTo(t2.getBookedDate()));
