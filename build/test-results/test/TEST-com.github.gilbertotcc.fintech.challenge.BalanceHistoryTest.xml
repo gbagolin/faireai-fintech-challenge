@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.github.gilbertotcc.fintech.challenge.BalanceHistoryTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-10-31T12:52:49" hostname="giovanni-N550JV" time="0.304">
+  <properties/>
+  <testcase name="addTransactionAfterReferenceShouldSucceed()" classname="com.github.gilbertotcc.fintech.challenge.BalanceHistoryTest" time="0.276"/>
+  <testcase name="createBalanceHistoryShouldSucceed()" classname="com.github.gilbertotcc.fintech.challenge.BalanceHistoryTest" time="0.002"/>
+  <testcase name="addBackwardTransactionsInOrderShouldSucceed()" classname="com.github.gilbertotcc.fintech.challenge.BalanceHistoryTest" time="0.003"/>
+  <testcase name="addOnwardTransactionsInOrderShouldSucceed()" classname="com.github.gilbertotcc.fintech.challenge.BalanceHistoryTest" time="0.003"/>
+  <testcase name="addSingleTransactionBeforeReferenceShouldSucceed()" classname="com.github.gilbertotcc.fintech.challenge.BalanceHistoryTest" time="0.002"/>
+  <testcase name="addSingleTransactionSameDayOfReferenceShouldSucceed()" classname="com.github.gilbertotcc.fintech.challenge.BalanceHistoryTest" time="0.002"/>
+  <testcase name="addOnwardTransactionsInReverseOrderShouldSucceed()" classname="com.github.gilbertotcc.fintech.challenge.BalanceHistoryTest" time="0.003"/>
+  <testcase name="addBackwardTransactionsInReverseOrderShouldSucceed()" classname="com.github.gilbertotcc.fintech.challenge.BalanceHistoryTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
