@@ -4,15 +4,12 @@ import lombok.With;
 import lombok.AccessLevel;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
 import io.vavr.collection.List;
-
-import javax.sound.sampled.Line;
 
 
 @With(value = AccessLevel.PRIVATE)
@@ -37,6 +34,10 @@ public class BalanceHistory {
     return this;
   }
 
+  /**
+   * For each onward transaction, add the balance to the map.
+   * The amount is computed as the cumulative sum given the balance and the transaction.
+   */
   private void computeOnWardBalances() {
     onWardTransactions.sort((t1, t2) -> t1.getBookedDate().compareTo(t2.getBookedDate()));
     BigDecimal tmpBalance = referenceBalance.getAmount();
@@ -46,7 +47,10 @@ public class BalanceHistory {
       balances.put(newBalance.getDate(), newBalance);
     }
   }
-
+  /**
+   * For each backward transaction, add the balance to the map.
+   * The amount is computed as the cumulative subtraction given the balance and the transaction.
+   */
   private void computeBackwardBalances() {
     backWardTransactions.sort((t1, t2) -> t2.getBookedDate().compareTo(t1.getBookedDate()));
     BigDecimal tmpBalance = referenceBalance.getAmount();
