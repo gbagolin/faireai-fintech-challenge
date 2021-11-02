@@ -38,6 +38,7 @@ public class BalanceHistory {
    * For each onward transaction, add the balance to the map.
    * The amount is computed as the cumulative sum given the balance and the transaction.
    */
+
   private void computeOnWardBalances() {
     onWardTransactions.sort((t1, t2) -> t1.getBookedDate().compareTo(t2.getBookedDate()));
     BigDecimal tmpBalance = referenceBalance.getAmount();
@@ -51,6 +52,7 @@ public class BalanceHistory {
    * For each backward transaction, add the balance to the map.
    * The amount is computed as the cumulative subtraction given the balance and the transaction.
    */
+
   private void computeBackwardBalances() {
     backWardTransactions.sort((t1, t2) -> t2.getBookedDate().compareTo(t1.getBookedDate()));
     BigDecimal tmpBalance = referenceBalance.getAmount();
